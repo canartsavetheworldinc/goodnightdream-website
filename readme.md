@@ -1,13 +1,10 @@
-# Parcel-Vue
-The boilerplate for building Vue applications with Parcel
+# GoodNightDream
 
-if you need server-side -> [tomon9086/parcel-vue-with-koa](https://github.com/tomon9086/parcel-vue-with-koa)
-
-## Usage
-Just clone and build.
+## Build
 
 ```shell=
-git clone git@github.com:tomon9086/parcel-vue.git
-cd parcel-vue
+git clone git@github.com:canartsavetheworldinc/goodnightdream-website.git
+cd goodnightdream-website
+npm install
 npm start
 ```
