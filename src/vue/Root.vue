@@ -2,23 +2,31 @@
 	<div class="root-container">
 		<Header></Header>
 		<div class="root-content">
-			<Top></Top>
+			<Top v-if="pathname === `/`"></Top>
+			<Twitter v-if="pathname === `/twitter`"></Twitter>
+			<Story v-if="pathname === `/story`"></Story>
+			<Demo v-if="pathname === `/demo`"></Demo>
 		</div>
 		<Footer></Footer>
 	</div>
 </template>
 
 <script>
-	// const Hello = require("./components/Hello.vue")
 	const Header = require("./components/Header.vue")
 	const Footer = require("./components/Footer.vue")
 	const Top = require("./Top.vue")
+	const Twitter = require("./Twitter.vue")
+	const Story = require("./Story.vue")
+	const Demo = require("./Demo.vue")
 
 	module.exports = {
 		components: {
 			Header,
 			Footer,
-			Top
+			Top,
+			Twitter,
+			Story,
+			Demo
 		},
 		data() {
 			return {
@@ -27,6 +35,9 @@
 		methods: {
 		},
 		computed: {
+			pathname() {
+				return window.location.pathname
+			}
 		}
 	}
 </script>
