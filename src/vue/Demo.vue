@@ -1,5 +1,6 @@
 <template>
 	<div class="page-container">
+		<Index :src="indexImg" title="demo"></Index>
 		<div class="discription">
 			<p>開発中です</p>
 			<p>しばらくお待ちください</p>
@@ -8,11 +9,15 @@
 </template>
 
 <script>
+	const Index = require("./components/Index.vue")
+
 	module.exports = {
 		components: {
+			Index
 		},
 		data() {
 			return {
+				indexImg: require("../img/dummy-round.png")
 			}
 		},
 		methods: {
@@ -24,9 +29,6 @@
 
 <style scoped>
 	.page-container {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
 		margin: 0 10%;
 	}
 	.discription {
