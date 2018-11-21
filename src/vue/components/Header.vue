@@ -1,7 +1,9 @@
 <template>
 	<div class="container">
 		<div class="logo">
-			<img src="../../img/logo_tsp.png" />
+			<a href="/">
+				<img src="../../img/logo_tsp.png" />
+			</a>
 		</div>
 		<div class="locale"><a href="/">EN</a> / <a href="/">JP</a></div>
 	</div>

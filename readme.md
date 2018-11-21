@@ -1,4 +1,5 @@
 # GoodNightDream
+[![Build Status](https://travis-ci.com/canartsavetheworldinc/goodnightdream-website.svg?branch=master)](https://travis-ci.com/canartsavetheworldinc/goodnightdream-website)
 
 ## Build
 
