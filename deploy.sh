@@ -14,4 +14,5 @@ git init
 git add .
 git commit -m "Deploy to GitHub Pages"
 # git push --force --quiet "https://${GH_TOKEN}@github.com/canartsavetheworldinc/goodnightdream-website.git" master:gh-pages > /dev/null 2>&1
+echo "${GH_TOKEN}"
 git push --force "https://${GH_TOKEN}@github.com/canartsavetheworldinc/goodnightdream-website.git" master:gh-pages
