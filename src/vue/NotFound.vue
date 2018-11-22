@@ -3,12 +3,7 @@
 		<div class="error-code">
 			404
 		</div>
-		<div class="logo">
-			<a href="/">
-				<img src="../img/logo_tsp.png" />
-			</a>
-		</div>
-		<div>
+		<div class="error-message">
 			Sorry, Page Not Found
 		</div>
 	</div>
@@ -31,7 +26,7 @@
 
 <style scoped>
 	.page-container {
-		min-height: 100vh;
+		height: 100%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -40,9 +35,7 @@
 	.error-code {
 		font-size: 30px;
 	}
-	.logo {
-	}
-	.logo img {
-		height: 100%;
+	.error-message {
+		margin-bottom: 10%;
 	}
 </style>

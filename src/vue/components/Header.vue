@@ -1,11 +1,11 @@
 <template>
 	<div class="container">
 		<div class="logo">
-			<a href="/">
+			<router-link to="/">
 				<img src="../../img/logo_tsp.png" />
-			</a>
+			</router-link>
 		</div>
-		<div class="locale"><a href="/">EN</a> / <a href="/">JP</a></div>
+		<div class="locale"><router-link to="/">EN</router-link> / <router-link to="/">JP</router-link></div>
 	</div>
 </template>
 

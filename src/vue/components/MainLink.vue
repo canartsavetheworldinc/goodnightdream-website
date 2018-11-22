@@ -1,7 +1,9 @@
 <template>
 	<div class="container">
-		<div class="icon" @click="jump()">
-			<img :src="src">
+		<div class="icon">
+			<router-link :to="href">
+				<img :src="src">
+			</router-link>
 		</div>
 		<div class="title">{{ title }}</div>
 	</div>
