@@ -1,11 +1,11 @@
 language: node_js
 node_js:
-  - 10.13
+- 10.13
 cache:
   directories:
-    - node_modules
+  - node_modules
 script:
-  - '[ "$TRAVIS_BRANCH" == master ] && bash ./deploy.sh'
+- '[ "$TRAVIS_BRANCH" == master ] && bash ./deploy.sh'
 env:
   global:
-    - secure: 'WnBTq9Cl9PeOx1eL3yrWfHtaHAqx4GOglZ+fg4OW4qswTfWtvRik/WeaSV8S826qvkaNA6idPTsKQ5pz6kobiJZOodhILUbfez9y/JoYoXXzq4mTx8mo19DxwDFD2dWiJ63sC6qAH74xs1yF8JhgUFkAFE550DdjzvlpE0vzmTs7nEAm5WHeYFzgx3LTPOFERRsKO7TCGZD5Bl77arecWeQ/EBh9awM6ZuCdbjNUwVhtgh8VbZG16E8roIesIyujIMAIl9OIKmA1v2JLaeSVLPYrWPHiYemQjFZ397reumGUKVT8p3OsLNxoLbPAbJlenPcT7VCWnUUW0CZVtTf8bBDaufo73thCYa2JdOZL5j6c70Oe8y7GQr28GLvb29eiWkQfZSWt47V5ttJ01pfGqbFiwC8o4OqJ0vZuV+a2BpCkDrVo1CC69/92g6GTBCbIgUynpGT/IvnyzRClR2+dEqVUsdluS9IvGPQZzfq8HZIjIjpy2ELlZYpc6ykU6fReVgE0bZu5/fIpPYsFxy+dDdG9iv7dNmmwYakOgpIgFFev+m0xNB4eNBmVqzkEoN6aPk05ueSZEkjk0aKiOFzEV2hlUI49IhaR4jnSHHFrCGiHOv12i7MHSLqgSH0scI9K+U8rm/XvMxa/yd5iHQNfJv+D879HvphSKTpSkQhklLo='
+    secure: Nk4N0JJSpJ0lsz/lIwbW3BiFALJWfZ2TCFmO1rb/04HtXyVDNraIlWuJIWsrP0wu5mQt+2XS6w460o4s7a2GaS0UY8+zHEQYom2RT4gNN6nhHmGSG84DzPPgMW1+o0NObeAnK09eDcdeaFY2+ffzoNjN/v8j4OfoG+YVqsfB7PBmGBvU82m5a2CdQh/PQs/DZU4Z0lxDiLCecosy82493y1707H1d8kFwHJAQMm1qL0rvykK3sK8L0B4CBCIa9LXvzGJ70v7Kj0lapWhIQidQok+PBlf4OafSkK/VGdqFdSqumnM3vpspe06tL1MBR6Hb+f++1nHd11wGE3/HH34wrHD7IlpyY+slJj3ziXBKPUppIE0rILVloR/hm4gOvIc3CAuEGcEll7/H8JkZKUWjP3KAQb5sCdmZPF3c80SPl8FSBNX3yhs3d3ZWVdz1paPIScPt1c97D/u+cM6lykx2psXbyjjYFunqyjNHPpYr7rxHOk+6V6gH3u0iWmWEcL+FPoLie8FzzFhITa7VgdgDVthxK/NUY/k4+zT5sVYT4BWjvp4Ei+BVCy5lOBegpIvrWtRqeKKjiLdLlyrWGXSyVtKGdKXH2vsO2GrBzFZS9K09Bk+RBaVLqfpJ9Zy8EgDE/7iv7a8eNiS+5XM07EK+tMAZsUDZ/aYOrN1+vBrMHQ=
