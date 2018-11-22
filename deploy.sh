@@ -9,5 +9,6 @@ git config user.name "canartsavetheworld"
 
 git init
 git add .
-git commit -m "Deploy to GitHub Pages"
-git push --force "https://${GH_TOKEN}@github.com/canartsavetheworldinc/goodnightdream-website.git" master:gh-pages
+git commit -m "Deploy: ${TRAVIS_JOB_NUMBER}"
+# git push --force "https://${GH_TOKEN}@github.com/canartsavetheworldinc/goodnightdream-website.git" master:gh-pages
+git push --force "https://${GH_TOKEN}@github.com/canartsavetheworldinc/goodnightdream-website.git" gh-pages
