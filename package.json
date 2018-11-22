@@ -13,7 +13,7 @@
     "vuex": "^3.0.1"
   },
   "scripts": {
-    "build": "parcel build src/index.html --out-dir build",
+    "build": "parcel build src/index.html --out-dir build --public-url ./",
     "start": "parcel -p 2000 src/index.html"
   }
 }
