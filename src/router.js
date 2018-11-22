@@ -13,5 +13,6 @@ const routes = [
 
 module.exports = new VueRouter({
 	mode: "history",
+	base: process.env.BASE_PATH || "",
 	routes
 })
