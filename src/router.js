@@ -12,6 +12,6 @@ const routes = [
 ]
 
 module.exports = new VueRouter({
-	mode: "history",
+	mode: "hash",
 	routes
 })
