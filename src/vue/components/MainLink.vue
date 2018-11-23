@@ -19,9 +19,6 @@
 			}
 		},
 		methods: {
-			jump() {
-				window.location.href = this.href
-			}
 		},
 		computed: {
 		}
@@ -36,8 +33,8 @@
 	}
 	.icon {
 		/*border: 1px solid red;*/
-		width: 150px;
-		height: 150px;
+		width: 70px;
+		height: 70px;
 		/*border-radius: 100px;*/
 		cursor: pointer;
 	}
@@ -45,8 +42,8 @@
 		filter: brightness(80%);
 	}
 	.icon img {
-		max-width: 100%;
-		max-height: 100%;
+		width: 100%;
+		height: 100%;
 	}
 	.title {
 		font-size: 1.3em;

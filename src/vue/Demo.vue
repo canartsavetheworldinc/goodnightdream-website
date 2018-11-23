@@ -17,7 +17,7 @@
 		},
 		data() {
 			return {
-				indexImg: require("../img/dummy-round.png")
+				indexImg: require("../img/top_right.png")
 			}
 		},
 		methods: {

@@ -16,7 +16,7 @@
 		},
 		data() {
 			return {
-				indexImg: require("../img/dummy-round.png")
+				indexImg: require("../img/twitter_logo.png")
 			}
 		},
 		methods: {
