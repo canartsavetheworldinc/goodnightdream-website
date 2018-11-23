@@ -1,7 +1,7 @@
 <template>
 	<div class="index-container">
 		<img :src="src" />
-		<div>{{ title }}</div>
+		<div class="title">{{ title }}</div>
 	</div>
 </template>
 
@@ -25,5 +25,8 @@
 	.index-container img {
 		height: 100%;
 		margin: 0 4px;
+	}
+	.index-container .title {
+		font-family: "cheese";
 	}
 </style>

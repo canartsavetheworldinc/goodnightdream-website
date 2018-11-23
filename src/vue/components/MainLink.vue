@@ -47,5 +47,6 @@
 	}
 	.title {
 		font-size: 1.3em;
+		font-family: "cheese";
 	}
 </style>
