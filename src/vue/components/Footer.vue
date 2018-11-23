@@ -11,7 +11,7 @@
 
 <style scoped>
 	.container {
-		width: 100%;
+		min-height: 16px;
 		padding: 20px;
 		background-color: #150030;
 		display: flex;

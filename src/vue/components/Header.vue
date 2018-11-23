@@ -18,6 +18,7 @@
 	}
 	.container {
 		height: 150px;
+		min-height: 150px;
 		display: flex;
 		justify-content: center;
 	}
