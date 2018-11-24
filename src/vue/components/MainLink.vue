@@ -2,10 +2,14 @@
 	<div class="container">
 		<div class="icon">
 			<router-link :to="href">
-				<img :src="src">
+				<img :src="src" />
 			</router-link>
 		</div>
-		<div class="title">{{ title }}</div>
+		<div class="title">
+			<router-link :to="href">
+				{{ title }}
+			</router-link>
+		</div>
 	</div>
 </template>
 
@@ -38,9 +42,6 @@
 		/*border-radius: 100px;*/
 		cursor: pointer;
 	}
-	.icon:hover {
-		filter: brightness(80%);
-	}
 	.icon img {
 		width: 100%;
 		height: 100%;
@@ -48,5 +49,12 @@
 	.title {
 		font-size: 1.3em;
 		font-family: "cheese";
+	}
+	.title a {
+		color: #ddd;
+		text-decoration: none;
+	}
+	.icon:hover, .title:hover {
+		filter: brightness(80%);
 	}
 </style>
