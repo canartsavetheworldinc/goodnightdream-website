@@ -20,7 +20,13 @@
 		created() {
 			if(this.$slots.default) {
 				for(let slot of this.$slots.default) {
-					this.source += slot.text
+					// console.log(slot)
+					if(slot.tag === "br")
+						this.source += "\n\n"
+					if(slot.tag === "hr")
+						this.source += `<hr style="border: 0; height: 1.5em;">`
+					if(slot.text)
+						this.source += slot.text
 				}
 			}
 		},

@@ -17,8 +17,8 @@
 		color: #ddd;
 	}
 	.container {
-		height: 150px;
-		min-height: 150px;
+		height: 300px;
+		min-height: 300px;
 		display: flex;
 		justify-content: center;
 	}

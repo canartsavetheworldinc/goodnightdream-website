@@ -1,7 +1,7 @@
 <template>
 	<div class="container">
 		<div class="copyright">
-			Copyright © CASW inc.
+			Copyright © 2018 GoodNightDream
 		</div>
 	</div>
 </template>
