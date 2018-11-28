@@ -19,6 +19,7 @@
 	.container {
 		height: 300px;
 		min-height: 300px;
+		margin: -50px 0 -60px 0;
 		display: flex;
 		justify-content: center;
 	}

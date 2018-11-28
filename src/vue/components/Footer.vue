@@ -12,6 +12,7 @@
 <style scoped>
 	.container {
 		min-height: 16px;
+		margin-top: 100px;
 		padding: 20px;
 		background-color: #150030;
 		display: flex;

@@ -37,8 +37,8 @@
 	}
 	.icon {
 		/*border: 1px solid red;*/
-		width: 70px;
-		height: 70px;
+		/* width: 70px;
+		height: 70px; */
 		/*border-radius: 100px;*/
 		cursor: pointer;
 	}
@@ -48,7 +48,7 @@
 	}
 	.title {
 		font-size: 1.3em;
-		font-family: "cheese";
+		/* font-family: "cheese"; */
 	}
 	.title a {
 		color: #ddd;
