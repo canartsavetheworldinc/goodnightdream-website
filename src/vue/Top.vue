@@ -12,9 +12,9 @@
 			</Markdown>
 		</div>
 		<div class="main-links">
-			<MainLink class="main-link story" :src="mainLinks.story" title="story" href="/story"></MainLink>
-			<MainLink class="main-link about" :src="mainLinks.about" title="about" href="/about"></MainLink>
-			<MainLink class="main-link demo" :src="mainLinks.demo" title="demo" href="/demo"></MainLink>
+			<MainLink class="main-link story" :src="mainLinks.story" title="Story" href="/story"></MainLink>
+			<MainLink class="main-link about" :src="mainLinks.about" title="About" href="/about"></MainLink>
+			<MainLink class="main-link demo" :src="mainLinks.demo" title="Demo" href="/demo"></MainLink>
 		</div>
 		<div class="main-links">
 			<MainLink class="main-link twitter" :src="mainLinks.twitter" title="twitter" href="/twitter"></MainLink>
@@ -56,7 +56,7 @@
 		margin: 0 10%;
 	}
 	.discription {
-		margin: 30px 0 15px 0;
+		margin: 30px 0 25px 0;
 		text-align: center;
 	}
 	.main-links {
@@ -67,6 +67,9 @@
 	}
 	.main-link {
 		width: 105px;
+	}
+	.main-link.about {
+		transform: translateY(-10px);
 	}
 	.main-link.twitter {
 		width: 56px;
