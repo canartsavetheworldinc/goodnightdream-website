@@ -56,6 +56,7 @@
 		margin: 0 10%;
 	}
 	.discription {
+		margin: 30px 0;
 		text-align: center;
 	}
 	.main-links {
