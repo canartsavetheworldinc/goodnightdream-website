@@ -9,6 +9,10 @@ git config user.name "canartsavetheworld"
 
 echo 'goodnightdream.cf' > CNAME
 
+# mkdir public
+# cp ../src/img ./public/img
+# cp ../src/md ./public/md
+
 git init
 git add .
 git commit -m "Deploy: ${TRAVIS_JOB_NUMBER}"

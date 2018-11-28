@@ -1,7 +1,15 @@
 <template>
 	<div class="top-container">
 		<div class="discription">
-			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+			<Markdown>
+「おやすみなさい よい夢を」
+
+とある理由で宿屋の管理を引き受けた主人公は 夢の中で宿泊客の悩みと夢に向き合っていく
+
+悩みや希望を抱えて 人々は何を"ユメ"に見るのか
+
+◾︎*.◾︎/◾︎の “ユメ” を叶える “夢物語” RPG
+			</Markdown>
 		</div>
 		<div class="main-links">
 			<MainLink :src="mainLinks.story" title="story" href="/story"></MainLink>
@@ -16,10 +24,12 @@
 
 <script>
 	const MainLink = require("./components/MainLink.vue")
+	const Markdown = require("./components/Markdown.vue")
 
 	module.exports = {
 		components: {
-			MainLink
+			MainLink,
+			Markdown
 		},
 		data() {
 			return {
@@ -47,6 +57,7 @@
 	}
 	.discription {
 		margin-bottom: 50px;
+		text-align: center;
 	}
 	.main-links {
 		width: 100%;

@@ -2,17 +2,83 @@
 	<div class="page-container">
 		<Index :src="indexImg" title="story"></Index>
 		<div class="discription">
-			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+			<Markdown>
+鳥のさえずりが聞こえる  
+朝日を受けてカーテン越しに鳥の影が見える  
+望んでもいないのに、また朝がやってきてしまった  
+永遠に夢の中にいられたらいいのに そこでは痛みも苦しみも全て想像の中に溶ける
+
+「おはよう。朝ごはん、できてるわよ」
+
+優しい祖母の声がする  
+どうして優しくしてくれるんだろう  
+私はもう◾︎*.◾︎/◾︎のに
+
+「長期休みだからと言っていつまでも部屋に引きこもっていると気分が滅入ってしまうわ」
+
+私は温かいスープを飲みながら祖母の声に耳を傾ける  
+優しさが痛いのだ 私にはそれを受け止めきれない  
+いっそ苦しめてくれればいい それで許されるのなら
+
+「そうね… せっかくのいい天気ですし。ちょっとお遣いにでも行ってきてくれるかしら？」
+
+黙って箸を進める私に祖母はそう問いかけた  
+正直味はしないが、それでもお腹が減るあたり、私もちゃんと生きているということだろう
+
+気乗りはしないが、お遣いくらいお安い御用だ  
+少しでも祖母の役に立てるのだから
+
+食事を終えた私は軽く身支度を済ませ、家を出る  
+街の人たちの何気ない視線が怖い  
+心の中でなにを思われているんだろう  
+きっと私には誰も見向きもしないのに  
+どう見られているかがひどく気になって仕方がない
+
+そそくさと買い物を終えた私は寄り道もせず帰路につく  
+必要最低限、それ以上の会話は心の中を見透かされそうで怖くなってしまう  
+どうか誰にも会いませんように
+
+「あら、もう帰ったのね。おつかいありがとう」
+
+家の近くで祖母が出迎えてくれた  
+ほっとして涙が出そうになる  
+いけない、ここで泣いては祖母を不安にさせてしまうだけだ
+
+「あのね、◾︎*.。 あなたのいとこが田舎で宿屋をやっているでしょう？  
+あなたと仲も良かったはずだし、少しの間そこに行って気分転換してくるのはどうかしら  
+このままずっとここにいても… あなたは辛いでしょう？」
+
+「汽車のチケットも取っておいたの あなたさえ行きたければいつでもいけるわ」
+
+--------------☾-----------------
+
+そうして私は短い療養の旅に出た  
+滞在の予定は１週間、この短い間に何かが変わるとも思えないが  
+それでもあの街を出られるのなら、私はすぐにでも逃げ出したかった  
+だってあの街は…
+
+◾︎*.◾︎/◾︎◾︎*.◾︎/◾︎◾︎*.◾︎/◾︎◾︎*.◾︎/◾︎◾︎*.◾︎/◾︎
+
+到着までまだ時間があるらしい  
+午後の陽気に当てられて少し眠気がやってきた  
+眠れるうちに眠っておこう
+
+夢の中では辛いことも忘れられるから
+
+“GoodNightDream”
+			</Markdown>
 		</div>
 	</div>
 </template>
 
 <script>
 	const Index = require("./components/Index.vue")
+	const Markdown = require("./components/Markdown.vue")
 
 	module.exports = {
 		components: {
-			Index
+			Index,
+			Markdown
 		},
 		data() {
 			return {
@@ -34,5 +100,6 @@
 		margin: 0 10%;
 	}
 	.discription {
+		width: 100%;
 	}
 </style>

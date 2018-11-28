@@ -2,17 +2,30 @@
 	<div class="page-container">
 		<Index :src="indexImg" title="about"></Index>
 		<div class="discription">
-			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+			<Markdown>
+Goodnightdream は人々の"ユメ"を叶える群像劇RPGです  
+あなたのとる全ての行動が結末を変えうる力を持っています  
+諦めずに何度も挑戦するのもいいでしょう  
+もちろん、諦めて投げ出してしまうのも自由です
+
+ただし、"ユメ"を叶えたければ常に最善を尽くすことをお勧めします  
+あなたがいつも言われているように
+
+このゲームはRPGと音ゲーの要素を含んでいます  
+キャラクターを操作して旅をし、音ゲーのような戦闘を介して、音楽の力で人々の夢を叶える後押しをしましょう
+			</Markdown>
 		</div>
 	</div>
 </template>
 
 <script>
 	const Index = require("./components/Index.vue")
+	const Markdown = require("./components/Markdown.vue")
 
 	module.exports = {
 		components: {
-			Index
+			Index,
+			Markdown
 		},
 		data() {
 			return {
@@ -34,5 +47,6 @@
 		margin: 0 10%;
 	}
 	.discription {
+		width: 100%;
 	}
 </style>
