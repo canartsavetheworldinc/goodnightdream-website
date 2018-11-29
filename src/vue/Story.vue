@@ -92,7 +92,7 @@ Japanese only yet...
 		},
 		computed: {
 			locale() {
-				console.log(this.$store.getters.getLocale)
+				// console.log(this.$store.getters.getLocale)
 				return this.$store.getters.getLocale
 			}
 		}

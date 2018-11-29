@@ -51,7 +51,7 @@ This is the RPG making “DREAMS” of ◾︎*.◾︎/◾︎ come true
 		},
 		computed: {
 			locale() {
-				console.log(this.$store.getters.getLocale)
+				// console.log(this.$store.getters.getLocale)
 				return this.$store.getters.getLocale
 			}
 		}

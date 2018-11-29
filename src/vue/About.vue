@@ -49,7 +49,7 @@ Goodnightdream は人々の"ユメ"を叶える群像劇RPGです<br>
 		},
 		computed: {
 			locale() {
-				console.log(this.$store.getters.getLocale)
+				// console.log(this.$store.getters.getLocale)
 				return this.$store.getters.getLocale
 			}
 		}
