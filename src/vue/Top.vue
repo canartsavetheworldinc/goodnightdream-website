@@ -1,7 +1,13 @@
 <template>
 	<div class="top-container">
 		<div class="discription">
-			<Markdown>
+			<Markdown v-if="locale === 'en'">
+“Good night. Hope you have a good dream.”<br>
+You undertaking a management of an inn for some reasons face worries and dreams of visitors in “dreams”<br>
+what do people having hopes and troubles see in “dreams”?<br>
+This is the RPG making “DREAMS” of ◾︎*.◾︎/◾︎ come true
+			</Markdown>
+			<Markdown v-if="locale === 'jp'">
 「おやすみなさい よい夢を」<br>
 <br>
 とある理由で宿屋の管理を引き受けた主人公は 夢の中で宿泊客の悩みと夢に向き合っていく<br>
@@ -44,6 +50,10 @@
 		methods: {
 		},
 		computed: {
+			locale() {
+				console.log(this.$store.getters.getLocale)
+				return this.$store.getters.getLocale
+			}
 		}
 	}
 </script>

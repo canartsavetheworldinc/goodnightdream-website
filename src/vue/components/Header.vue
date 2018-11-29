@@ -5,11 +5,24 @@
 				<img src="../../img/logo_tsp.png" alt="GoodNightDream" />
 			</router-link>
 		</div>
-		<div class="locale"><router-link to="/">EN</router-link> / <router-link to="/">JP</router-link></div>
+		<div class="locale"><a :href="hash" @click="locale(`en`)">EN</a> / <a :href="hash" @click="locale('jp')">JP</a></div>
 	</div>
 </template>
 
 <script>
+	module.exports = {
+		data() {
+			return {
+				hash: window.location.hash
+			}
+		},
+		methods: {
+			locale(lang) {
+				// console.log(lang)
+				this.$store.dispatch("changeLocale", lang)
+			}
+		}
+	}
 </script>
 
 <style scoped>
@@ -31,7 +44,7 @@
 	}
 	.locale {
 		position: absolute;
-		top: 5px;
-		right: 5px;
+		top: 15px;
+		right: 15px;
 	}
 </style>

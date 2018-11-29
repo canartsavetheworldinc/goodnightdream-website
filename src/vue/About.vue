@@ -2,7 +2,20 @@
 	<div class="page-container">
 		<Index :src="indexImg" title="about"></Index>
 		<div class="discription">
-			<Markdown>
+			<Markdown v-if="locale === 'en'">
+Goodnightdream is an ansemble-cast role playing game to make people’s “dreams” come true<br>
+every single action you choose may change endings<br>
+it is ok if you try over and over again to make this happen<br>
+of course it is fine if you dont do so<br>
+<hr>
+BUT, please do your best if you would like to make your “dream” come true<br>
+as you are said in your life<br>
+<hr>
+This game consists of a normal RPG section (as you control the charactor to move and enjoy talking)<br>
+and a battle section which is like a music video game and a shooting game are combined<br>
+use the power of music to cure people’s worries and to cheer them up
+			</Markdown>
+			<Markdown v-if="locale === 'jp'">
 Goodnightdream は人々の"ユメ"を叶える群像劇RPGです<br>
 あなたのとる全ての行動が結末を変えうる力を持っています<br>
 諦めずに何度も挑戦するのもいいでしょう<br>
@@ -35,6 +48,10 @@ Goodnightdream は人々の"ユメ"を叶える群像劇RPGです<br>
 		methods: {
 		},
 		computed: {
+			locale() {
+				console.log(this.$store.getters.getLocale)
+				return this.$store.getters.getLocale
+			}
 		}
 	}
 </script>

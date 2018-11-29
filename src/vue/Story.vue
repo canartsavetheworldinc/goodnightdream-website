@@ -2,7 +2,10 @@
 	<div class="page-container">
 		<Index :src="indexImg" title="story"></Index>
 		<div class="discription">
-			<Markdown>
+			<Markdown v-if="locale === 'en'">
+Japanese only yet...
+			</Markdown>
+			<Markdown v-if="locale === 'jp'">
 鳥のさえずりが聞こえる<br>
 朝日を受けてカーテン越しに鳥の影が見える<br>
 望んでもいないのに、また朝がやってきてしまった<br>
@@ -88,6 +91,10 @@
 		methods: {
 		},
 		computed: {
+			locale() {
+				console.log(this.$store.getters.getLocale)
+				return this.$store.getters.getLocale
+			}
 		}
 	}
 </script>
