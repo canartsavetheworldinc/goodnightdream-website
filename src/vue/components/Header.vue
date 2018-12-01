@@ -1,6 +1,6 @@
 <template>
 	<div class="container">
-		<div class="logo">
+		<div class="logo" @click="showModal({ header: `test header`, body: `test body`, footer: `test footer` })">
 			<router-link to="/">
 				<img src="../../img/logo_tsp.png" alt="GoodNightDream" />
 			</router-link>
@@ -20,6 +20,9 @@
 			locale(lang) {
 				// console.log(lang)
 				this.$store.dispatch("changeLocale", lang)
+			},
+			showModal(message) {
+				this.$store.dispatch("changeModalMessage", message)
 			}
 		}
 	}
