@@ -1,6 +1,6 @@
 <template>
 	<transition name="modal">
-		<div class="modal-mask">
+		<div v-mask class="modal-mask">
 			<div class="modal-wrapper">
 				<div class="modal-container">
 					<div class="modal-header">
@@ -44,6 +44,14 @@
 			modalMessage() {
 				return this.$store.getters.modalMessage
 			}
+		},
+		directives: {
+			mask: {
+				inserted(el) {
+					el.addEventListener("wheel", (e) => { e.preventDefault() })
+					el.addEventListener("touchmove", (e) => { e.preventDefault() }, { passive: false })
+				}
+			}
 		}
 	}
 </script>
@@ -59,6 +67,7 @@
 		background-color: rgba(0, 0, 0, .5);
 		display: table;
 		transition: opacity .3s ease;
+		touch-action: none;
 	}
 
 	.modal-wrapper {
