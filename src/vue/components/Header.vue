@@ -17,8 +17,7 @@
 		data() {
 			return {
 				path: this.$route.path,
-				prankMsg: {},
-				nightmare: false
+				prankMsg: {}
 			}
 		},
 		watch: {
@@ -32,11 +31,14 @@
 				this.$store.dispatch("changeLocale", lang)
 			},
 			clickLogo() {
-				if(this.path === "/")
-					this.$store.dispatch("clickLogo")
-				else
-					this.$store.dispatch("clickLogo", 0)
-				console.log(this.path, this.clickCount)
+				// if(this.path === "/" || this.nightmare)
+				// 	this.$store.dispatch("clickLogo")
+				// else
+				// 	this.$store.dispatch("clickLogo", 0)
+				// console.log(this.path, this.clickCount)
+				if(this.path !== "/")
+					return
+				this.$store.dispatch("clickLogo")
 				switch(this.clickCount) {
 					case 1:
 						this.prankMsg = {
@@ -51,7 +53,7 @@
 						}
 						break
 					case 3:
-						this.nightmare = true
+						this.$store.dispatch("setNightmareState", true)
 						this.prankMsg = {
 							jp: new ModalMessage(`info`, `あはは、じゃあこんなのはどうさ？`, ``),
 							en: new ModalMessage(`info`, `hahha, so… how about this?`, ``)
@@ -76,10 +78,9 @@
 						}
 						break
 					default:
-						console.log("やっほ")
 						this.prankMsg = {}
 				}
-				console.log(this.prankMsg, this.getLang)
+				// console.log(this.prankMsg, this.getLang)
 				this.$store.dispatch("changeModalMessage", this.prankMsg[this.getLang] || null)
 			},
 			showModal(message) {
@@ -92,6 +93,9 @@
 			},
 			getLang() {
 				return this.$store.getters.getLocale
+			},
+			nightmare() {
+				return this.$store.getters.getNightmareState
 			}
 		}
 	}

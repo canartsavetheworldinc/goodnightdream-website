@@ -37,7 +37,14 @@
 		},
 		methods: {
 			close() {
+				// console.log("close!")
+				document.removeEventListener("keydown", this.keydownListener)
 				this.$store.dispatch("changeModalMessage", null)
+			},
+			keydownListener(e) {
+				// console.log(e)
+				if(e.key === "Enter")
+					this.close()
 			}
 		},
 		computed: {
@@ -47,7 +54,9 @@
 		},
 		directives: {
 			mask: {
-				inserted(el) {
+				inserted(el, binding, vnode) {
+					document.activeElement.blur()
+					document.addEventListener("keydown", vnode.context.keydownListener)
 					el.addEventListener("wheel", (e) => { e.preventDefault() })
 					el.addEventListener("touchmove", (e) => { e.preventDefault() }, { passive: false })
 				}

@@ -10,7 +10,8 @@ const store = new Vuex.Store({
 		locale: "",
 		showModal: false,
 		modalMessage: new ModalMessage(),
-		logoClickCount: 0
+		logoClickCount: 0,
+		nightmareState: false
 	},
 	mutations: {
 		changeLocale(state, lang) {
@@ -31,6 +32,9 @@ const store = new Vuex.Store({
 				state.logoClickCount = +val
 			else
 				state.logoClickCount++
+		},
+		setNightmareState(state, val) {
+			state.nightmareState = !!val
 		}
 	},
 	getters: {
@@ -46,6 +50,9 @@ const store = new Vuex.Store({
 		},
 		logoClickCount(state) {
 			return state.logoClickCount
+		},
+		getNightmareState(state) {
+			return state.nightmareState
 		}
 	},
 	actions: {
@@ -59,6 +66,9 @@ const store = new Vuex.Store({
 		},
 		clickLogo(store, val) {
 			store.commit("clickLogo", val)
+		},
+		setNightmareState(store, val) {
+			store.commit("setNightmareState", val)
 		}
 	}
 })
