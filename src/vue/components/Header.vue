@@ -2,7 +2,8 @@
 	<div class="container">
 		<div class="logo" @click="clickLogo()">
 			<router-link to="/">
-				<img src="../../img/logo_tsp.png" alt="GoodNightDream" />
+				<img v-if="!nightmare" src="../../img/logo_tsp.png" alt="GoodNightDream" />
+				<img v-if="nightmare" src="../../img/nightmare_tsp.png" alt="GoodNightMare" />
 			</router-link>
 		</div>
 		<div class="locale"><a href="#" @click="locale(`en`)">EN</a> / <a href="#" @click="locale('jp')">JP</a></div>
@@ -16,7 +17,8 @@
 		data() {
 			return {
 				path: this.$route.path,
-				prankMsg: {}
+				prankMsg: {},
+				nightmare: false
 			}
 		},
 		watch: {
@@ -49,6 +51,7 @@
 						}
 						break
 					case 3:
+						this.nightmare = true
 						this.prankMsg = {
 							jp: new ModalMessage(`info`, `あはは、じゃあこんなのはどうさ？`, ``),
 							en: new ModalMessage(`info`, `hahha, so… how about this?`, ``)
