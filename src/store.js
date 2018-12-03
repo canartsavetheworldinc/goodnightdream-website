@@ -3,26 +3,7 @@ const Vuex = require("vuex")
 
 Vue.use(Vuex)
 
-class ModalMessage {
-	constructor(header = "", body = "", footer = "") {
-		if(typeof header === "object") {
-			const obj = header
-			header = obj.header || ""
-			body = obj.body || ""
-			footer = obj.footer || ""
-		}
-		this.header = header
-		this.body = body
-		this.footer = footer
-	}
-	get object() {
-		return {
-			header: this.header,
-			body: this.body,
-			footer: this.footer
-		}
-	}
-}
+const ModalMessage = require("./modules/ModalMessage.js")
 
 const store = new Vuex.Store({
 	state: {
@@ -45,13 +26,16 @@ const store = new Vuex.Store({
 				throw new Error(`modal-message is invalid`)
 			state.modalMessage = new ModalMessage(message)
 		},
-		clickLogo(state) {
-			state.logoClickCount++
+		clickLogo(state, val) {
+			if(!isNaN(+val) && typeof +val === "number")
+				state.logoClickCount = +val
+			else
+				state.logoClickCount++
 		}
 	},
 	getters: {
 		getLocale(state) {
-			// console.log(state)
+			// console.log(`getLocale: ${ getQuery().lang }`)
 			return state.locale || getQuery().lang || "jp"
 		},
 		showModal(state) {
@@ -73,8 +57,8 @@ const store = new Vuex.Store({
 		changeModalMessage(store, message) {
 			store.commit("changeModalMessage", message)
 		},
-		clickLogo(store) {
-			store.commit("clickLogo")
+		clickLogo(store, val) {
+			store.commit("clickLogo", val)
 		}
 	}
 })
