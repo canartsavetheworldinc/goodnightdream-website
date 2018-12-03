@@ -42,8 +42,9 @@
 				this.$store.dispatch("changeModalMessage", null)
 			},
 			keydownListener(e) {
-				// console.log(e)
 				if(e.key === "Enter")
+					this.close()
+				if(e.key === "Escape")
 					this.close()
 			}
 		},
