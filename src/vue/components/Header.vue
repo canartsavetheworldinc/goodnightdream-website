@@ -1,11 +1,11 @@
 <template>
 	<div class="container">
-		<div class="logo" @click="showModal({ header: `test header`, body: `test body`, footer: `test footer` })">
+		<div class="logo" @click="clickLogo()">
 			<router-link to="/">
 				<img src="../../img/logo_tsp.png" alt="GoodNightDream" />
 			</router-link>
 		</div>
-		<div class="locale"><a :href="hash" @click="locale(`en`)">EN</a> / <a :href="hash" @click="locale('jp')">JP</a></div>
+		<div class="locale"><a href="#" @click="locale(`en`)">EN</a> / <a href="#" @click="locale('jp')">JP</a></div>
 	</div>
 </template>
 
@@ -13,7 +13,12 @@
 	module.exports = {
 		data() {
 			return {
-				hash: window.location.hash
+				path: this.$route.path
+			}
+		},
+		watch: {
+			$route() {
+				this.path = this.$route.path
 			}
 		},
 		methods: {
@@ -21,8 +26,18 @@
 				// console.log(lang)
 				this.$store.dispatch("changeLocale", lang)
 			},
+			clickLogo() {
+				if(this.path === "/")
+					this.$store.dispatch("clickLogo")
+				console.log(this.path, this.clickCount)
+			},
 			showModal(message) {
 				this.$store.dispatch("changeModalMessage", message)
+			}
+		},
+		computed: {
+			clickCount() {
+				return this.$store.getters.logoClickCount
 			}
 		}
 	}

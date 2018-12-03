@@ -16,10 +16,10 @@
 					<div class="modal-footer">
 						<slot name="footer">
 							{{ modalMessage.footer }}
-							<div class="modal-button" @click="close">
-								OK
-							</div>
 						</slot>
+					</div>
+					<div class="modal-button-container">
+						<div class="modal-button" @click="close">OK</div>
 					</div>
 				</div>
 			</div>
@@ -71,7 +71,7 @@
 		margin: 0px auto;
 		/* padding: 15px 30px 30px 20px; */
 		background-color: #140584;
-		border-radius: 2px;
+		border-radius: 7px;
 		box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
 		transition: all .3s ease;
 		font-family: Helvetica, Arial, sans-serif;
@@ -84,21 +84,31 @@
 	}
 
 	.modal-body {
-		margin: 20px 0 20px 30px;
+		margin: 20px 0 10px 30px;
 	}
 
 	.modal-footer {
 		/* font-weight: bold; */
 		/* background-color: #104; */
-		padding: 15px 20px 15px 20px;
+		padding: 15px 20px 5px 20px;
+	}
+
+	.modal-button-container {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		padding: 0 10px 10px 10px;
 	}
 
 	.modal-button {
-		float: right;
+		/* float: right; */
+		width: 35px;
 		border: 1px solid #ddd;
 		border-radius: 4px;
+		margin: 5px;
 		padding: 7px 15px;
 		cursor: pointer;
+		text-align: center;
 	}
 	.modal-button:hover {
 		background-color: rgba(255, 255, 255, .5);

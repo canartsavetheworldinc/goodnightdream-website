@@ -28,7 +28,8 @@ const store = new Vuex.Store({
 	state: {
 		locale: "",
 		showModal: false,
-		modalMessage: new ModalMessage()
+		modalMessage: new ModalMessage(),
+		logoClickCount: 0
 	},
 	mutations: {
 		changeLocale(state, lang) {
@@ -43,6 +44,9 @@ const store = new Vuex.Store({
 			if(typeof message !== "object")
 				throw new Error(`modal-message is invalid`)
 			state.modalMessage = new ModalMessage(message)
+		},
+		clickLogo(state) {
+			state.logoClickCount++
 		}
 	},
 	getters: {
@@ -55,6 +59,9 @@ const store = new Vuex.Store({
 		},
 		modalMessage(state) {
 			return state.modalMessage.object
+		},
+		logoClickCount(state) {
+			return state.logoClickCount
 		}
 	},
 	actions: {
@@ -65,6 +72,9 @@ const store = new Vuex.Store({
 		},
 		changeModalMessage(store, message) {
 			store.commit("changeModalMessage", message)
+		},
+		clickLogo(store) {
+			store.commit("clickLogo")
 		}
 	}
 })
