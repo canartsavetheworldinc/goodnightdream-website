@@ -106,17 +106,22 @@
 		color: #ddd;
 	}
 	.container {
-		height: 300px;
-		min-height: 300px;
-		margin: -50px 0 -60px 0;
+		height: 200px;
+		min-height: 200px;
+		/* margin: -50px 0 -60px 0; */
 		display: flex;
 		justify-content: center;
 	}
 	.logo {
 		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
 	.logo img {
-		height: 100%;
+		height: 180px;
+		width: 855px;
+		object-fit: cover;
 	}
 	.locale {
 		position: absolute;

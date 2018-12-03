@@ -66,7 +66,7 @@ This is the RPG making “DREAMS” of ◾︎*.◾︎/◾︎ come true
 		margin: 0 10%;
 	}
 	.discription {
-		margin: 30px 0 25px 0;
+		margin: 15px 0 25px 0;
 		text-align: center;
 	}
 	.main-links {
