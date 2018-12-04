@@ -46,6 +46,8 @@
 					this.close()
 				if(e.key === "Escape")
 					this.close()
+				if(e.key === " ")
+					e.preventDefault()
 			}
 		},
 		computed: {
