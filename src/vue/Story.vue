@@ -108,5 +108,6 @@ Japanese only yet...
 	}
 	.discription {
 		width: 100%;
+		text-align: center;
 	}
 </style>

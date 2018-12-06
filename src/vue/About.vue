@@ -65,5 +65,6 @@ Goodnightdream は人々の"ユメ"を叶える群像劇RPGです<br>
 	}
 	.discription {
 		width: 100%;
+		text-align: center;
 	}
 </style>
