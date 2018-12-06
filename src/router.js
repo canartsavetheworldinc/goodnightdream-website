@@ -5,7 +5,7 @@ Vue.use(VueRouter)
 
 const routes = [
 	{ path: "/", component: require("./vue/Top.vue") },
-	{ path: "/twitter", component: require("./vue/Twitter.vue") },
+	// { path: "/twitter", component: require("./vue/Twitter.vue") },
 	{ path: "/story", component: require("./vue/Story.vue") },
 	{ path: "/demo", component: require("./vue/Demo.vue") },
 	{ path: "/about", component: require("./vue/About.vue") },

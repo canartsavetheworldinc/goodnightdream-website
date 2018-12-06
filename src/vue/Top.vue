@@ -26,7 +26,7 @@ This is the RPG making “DREAMS” of ◾︎*.◾︎/◾︎ come true
 			<MainLink class="main-link demo" :src="mainLinks.demo" title="Demo" href="/demo"></MainLink>
 		</div>
 		<div class="main-links">
-			<MainLink class="main-link twitter" :src="mainLinks.twitter" title="Twitter" href="/twitter"></MainLink>
+			<MainLink class="main-link twitter" :src="mainLinks.twitter" title="Twitter" ahref="https://twitter.com/goodnightdream_"></MainLink>
 		</div>
 	</div>
 </template>

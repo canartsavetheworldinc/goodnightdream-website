@@ -2,17 +2,22 @@
 	<div class="page-container">
 		<Index :src="indexImg" title="twitter"></Index>
 		<div class="discription">
-			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+			<Markdown v-if="locale === 'en'">
+			</Markdown>
+			<Markdown v-if="locale === 'jp'">
+			</Markdown>
 		</div>
 	</div>
 </template>
 
 <script>
 	const Index = require("./components/Index.vue")
+	const Markdown = require("./components/Markdown.vue")
 
 	module.exports = {
 		components: {
-			Index
+			Index,
+			Markdown
 		},
 		data() {
 			return {
@@ -22,6 +27,10 @@
 		methods: {
 		},
 		computed: {
+			locale() {
+				// console.log(this.$store.getters.getLocale)
+				return this.$store.getters.getLocale
+			}
 		}
 	}
 </script>

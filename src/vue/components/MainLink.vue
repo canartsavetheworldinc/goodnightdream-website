@@ -1,21 +1,33 @@
 <template>
 	<div class="container">
 		<div class="icon">
-			<router-link :to="href">
+			<router-link v-if="href" :to="href">
 				<img :src="src" />
 			</router-link>
+			<a v-else-if="ahref" :href="ahref" target="_blank">
+				<img :src="src" />
+			</a>
+			<span v-else>
+				<img :src="src" />
+			</span>
 		</div>
 		<div class="title">
-			<router-link :to="href">
+			<router-link v-if="href" :to="href">
 				{{ title }}
 			</router-link>
+			<a v-else-if="ahref" :href="ahref" target="_blank">
+				{{ title }}
+			</a>
+			<span v-else>
+				{{ title }}
+			</span>
 		</div>
 	</div>
 </template>
 
 <script>
 	module.exports = {
-		props: ["href", "src", "title"],
+		props: ["href", "ahref", "src", "title"],
 		components: {
 		},
 		data() {
