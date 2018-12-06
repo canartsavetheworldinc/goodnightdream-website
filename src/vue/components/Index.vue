@@ -27,6 +27,6 @@
 		margin: 0 4px;
 	}
 	.index-container .title {
-		font-family: "cheese";
+		/* font-family: "cheese"; */
 	}
 </style>
