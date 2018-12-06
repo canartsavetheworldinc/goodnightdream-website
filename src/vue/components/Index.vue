@@ -2,7 +2,7 @@
 	<div class="index-container">
 		<img :src="src" />
 		<div class="title">{{ title }}</div>
-		<img v-if="character" :src="character" />
+		<img class="character" v-if="character" :src="character" />
 	</div>
 </template>
 
@@ -18,7 +18,7 @@
 		height: 30px;
 		display: flex;
 		justify-content: center;
-		align-items: center;
+		align-items: flex-end;
 		font-size: 27px;
 		/* border-left: 10px solid #44b; */
 		border-bottom: 2px solid #44b;
@@ -28,6 +28,9 @@
 	.index-container img {
 		height: 100%;
 		margin: 0 4px;
+	}
+	.index-container img.character {
+		height: 45px;
 	}
 	.index-container .title {
 		/* font-family: "cheese"; */
