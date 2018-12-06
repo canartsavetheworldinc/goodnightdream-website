@@ -4,14 +4,22 @@
 			404
 		</div>
 		<div class="error-message">
-			Sorry, Page Not Found
+			<Markdown v-if="locale === 'en'">
+Sorry, Page Not Found
+			</Markdown>
+			<Markdown v-if="locale === 'jp'">
+ページが見つかりません
+			</Markdown>
 		</div>
 	</div>
 </template>
 
 <script>
+	const Markdown = require("./components/Markdown.vue")
+
 	module.exports = {
 		components: {
+			Markdown
 		},
 		data() {
 			return {
@@ -20,6 +28,10 @@
 		methods: {
 		},
 		computed: {
+			locale() {
+				// console.log(this.$store.getters.getLocale)
+				return this.$store.getters.getLocale
+			}
 		}
 	}
 </script>
@@ -34,6 +46,7 @@
 	}
 	.error-code {
 		font-size: 30px;
+		margin-bottom: -10px;
 	}
 	.error-message {
 		margin-bottom: 10%;
