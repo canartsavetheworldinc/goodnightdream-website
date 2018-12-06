@@ -135,4 +135,18 @@
 		top: 15px;
 		right: 15px;
 	}
+	@media(max-width:768px) {
+		.container {
+			height: 100px;
+			min-height: 100px;
+			margin-top: 20px;
+		}
+		.logo img {
+			height: 85.5px;
+			width: 300px;
+		}
+		.logo img:hover {
+			filter: none;
+		}
+	}
 </style>

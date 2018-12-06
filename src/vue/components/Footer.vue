@@ -22,4 +22,9 @@
 	.copyright {
 		text-align: center;
 	}
+	@media(max-width:768px) {
+		.container {
+			margin-top: 30px;
+		}
+	}
 </style>

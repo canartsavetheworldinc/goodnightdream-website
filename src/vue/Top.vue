@@ -87,4 +87,15 @@ This is the RPG making “DREAMS” of ◾︎*.◾︎/◾︎ come true
 	.main-link.twitter {
 		width: 56px;
 	}
+	@media(max-width:768px) {
+		.discription {
+			margin: 5px 0 25px 0;
+		}
+		.main-links {
+			margin: 25px 0 10px 0;
+		}
+		.main-link {
+			width: 55px;
+		}
+	}
 </style>
