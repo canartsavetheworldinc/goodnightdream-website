@@ -2,12 +2,13 @@
 	<div class="index-container">
 		<img :src="src" />
 		<div class="title">{{ title }}</div>
+		<img v-if="character" :src="character" />
 	</div>
 </template>
 
 <script>
 	module.exports = {
-		props: ["src", "title"]
+		props: ["src", "title", "character"]
 	}
 </script>
 

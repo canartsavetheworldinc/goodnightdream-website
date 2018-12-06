@@ -1,6 +1,6 @@
 <template>
 	<div class="page-container">
-		<Index :src="indexImg" title="Story"></Index>
+		<Index :src="indexImg" title="Story" :character="indexCharaImg"></Index>
 		<div class="discription">
 			<Markdown v-if="locale === 'en'">
 Japanese only yet...
@@ -85,7 +85,8 @@ Japanese only yet...
 		},
 		data() {
 			return {
-				indexImg: require("../img/top_left.png")
+				indexImg: require("../img/top_left.png"),
+				indexCharaImg: require("../img/walking_forward-story.gif")
 			}
 		},
 		methods: {

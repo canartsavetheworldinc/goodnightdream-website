@@ -1,6 +1,6 @@
 <template>
 	<div class="page-container">
-		<Index :src="indexImg" title="About"></Index>
+		<Index :src="indexImg" title="About" :character="indexCharaImg"></Index>
 		<div class="discription">
 			<Markdown v-if="locale === 'en'">
 Goodnightdream is an ansemble-cast role playing game to make people’s “dreams” come true<br>
@@ -42,7 +42,8 @@ Goodnightdream は人々の"ユメ"を叶える群像劇RPGです<br>
 		},
 		data() {
 			return {
-				indexImg: require("../img/top_center.png")
+				indexImg: require("../img/top_center.png"),
+				indexCharaImg: require("../img/tanno-about.png")
 			}
 		},
 		methods: {

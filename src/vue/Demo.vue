@@ -1,6 +1,6 @@
 <template>
 	<div class="page-container">
-		<Index :src="indexImg" title="Demo"></Index>
+		<Index :src="indexImg" title="Demo" :character="indexCharaImg"></Index>
 		<div class="discription">
 			<p>開発中です</p>
 			<p>しばらくお待ちください</p>
@@ -17,7 +17,8 @@
 		},
 		data() {
 			return {
-				indexImg: require("../img/top_right.png")
+				indexImg: require("../img/top_right.png"),
+				indexCharaImg: require("../img/programing_mouse-demo.png")
 			}
 		},
 		methods: {
