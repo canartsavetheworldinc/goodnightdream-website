@@ -66,7 +66,7 @@ This is the RPG making “DREAMS” of ◾︎*.◾︎/◾︎ come true
 		margin: 0 10%;
 	}
 	.discription {
-		margin: 15px 0 25px 0;
+		margin: 15px 0 35px 0;
 		text-align: center;
 	}
 	.main-links {
@@ -79,7 +79,7 @@ This is the RPG making “DREAMS” of ◾︎*.◾︎/◾︎ come true
 		width: 105px;
 	}
 	.main-link.about {
-		transform: translateY(-10px);
+		transform: translateY(-20px);
 	}
 	.main-link.twitter {
 		width: 56px;
