@@ -10,3 +10,8 @@ html, body {
 	background-color: #000;
 	color: #ddd;
 }
+@media(max-width:768px) {
+	html, body {
+		font-size: 13px;
+	}
+}
