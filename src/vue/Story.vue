@@ -1,6 +1,6 @@
 <template>
 	<div class="page-container">
-		<Index :src="indexImg" title="story"></Index>
+		<Index :src="indexImg" title="Story"></Index>
 		<div class="discription">
 			<Markdown v-if="locale === 'en'">
 Japanese only yet...

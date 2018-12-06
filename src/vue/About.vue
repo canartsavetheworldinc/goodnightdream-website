@@ -1,6 +1,6 @@
 <template>
 	<div class="page-container">
-		<Index :src="indexImg" title="about"></Index>
+		<Index :src="indexImg" title="About"></Index>
 		<div class="discription">
 			<Markdown v-if="locale === 'en'">
 Goodnightdream is an ansemble-cast role playing game to make people’s “dreams” come true<br>

@@ -1,6 +1,6 @@
 <template>
 	<div class="page-container">
-		<Index :src="indexImg" title="demo"></Index>
+		<Index :src="indexImg" title="Demo"></Index>
 		<div class="discription">
 			<p>開発中です</p>
 			<p>しばらくお待ちください</p>

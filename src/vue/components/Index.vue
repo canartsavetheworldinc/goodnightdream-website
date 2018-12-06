@@ -16,10 +16,12 @@
 		width: 100%;
 		height: 30px;
 		display: flex;
+		justify-content: center;
 		align-items: center;
 		font-size: 27px;
-		border-left: 10px solid #44b;
-		border-bottom: 1px solid #44b;
+		/* border-left: 10px solid #44b; */
+		border-bottom: 2px solid #44b;
+		padding-bottom: 3px;
 		margin-bottom: 15px;
 	}
 	.index-container img {
