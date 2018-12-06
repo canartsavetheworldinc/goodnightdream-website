@@ -4,28 +4,37 @@
 		<div class="discription">
 			<Markdown v-if="locale === 'en'">
 Goodnightdream is an ansemble-cast role playing game to make people’s “dreams” come true<br>
-every single action you choose may change endings<br>
-it is ok if you try over and over again to make this happen<br>
-of course it is fine if you dont do so<br>
-<hr>
+<br>
+Every single decision you take may change endings<br>
+<br>
+It is ok if you retry over and over again to make it happen<br>
+or, of course, it is fine to give up chasing dreams<br>
+<br>
 BUT, please do your best if you would like to make your “dream” come true<br>
-as you are said in your life<br>
-<hr>
+<br>
 This game consists of a normal RPG section (as you control the charactor to move and enjoy talking)<br>
 and a battle section which is like a music video game and a shooting game are combined<br>
-use the power of music to cure people’s worries and to cheer them up
+Use the power of music to cure people’s worries and to cheer them up<br>
+<br>
+(tips; You can choose fighting styles. Who are not familiar with music video games can solve their worries in RPG ways, and vice versa. Don’t worry if you are not good at music games)
 			</Markdown>
 			<Markdown v-if="locale === 'jp'">
-Goodnightdream は人々の"ユメ"を叶える群像劇RPGです<br>
-あなたのとる全ての行動が結末を変えうる力を持っています<br>
-諦めずに何度も挑戦するのもいいでしょう<br>
-もちろん、諦めて投げ出してしまうのも自由です<br>
+GoodNightDream は人々の “ユメ” を叶える群像劇風RPGです<br>
+この世界ではあなたの取る全ての行動が結末を変え得る力を持っています<br>
+<br>
+夢を叶えるために, 諦めずに何度も挑戦するのも良いでしょう<br>
+もちろん, 諦めて匙を投げても誰にも責めることはできません<br>
+<br>
+ただし, あなたが"ユメ"を叶えたければ, 常に最善を尽くすことをお勧めします<br>
 <hr>
-ただし、"ユメ"を叶えたければ常に最善を尽くすことをお勧めします<br>
-あなたがいつも言われているように<br>
-<hr>
-このゲームはRPGと音ゲーの要素を含んでいます<br>
-キャラクターを操作して旅をし、音ゲーのような戦闘を介して、音楽の力で人々の夢を叶える後押しをしましょう
+GoodNightDream はRPGと音楽ゲームの要素を含んでいます<br>
+<br>
+キャラクターを操作して旅をし<br>
+音楽ゲームのような戦闘を介し<br>
+<br>
+音楽の力で人々の夢を叶える後押しをしましょう<br>
+<br>
+(ちなみに, 音ゲーやRPGの得手不得手によって戦い方を変えることが可能です. 音ゲーが苦手でも心配しないでね)
 			</Markdown>
 		</div>
 	</div>

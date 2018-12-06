@@ -3,16 +3,19 @@
 		<div class="discription">
 			<Markdown v-if="locale === 'en'">
 “Good night. Hope you have a good dream.”<br>
-You undertaking a management of an inn for some reasons face worries and dreams of visitors in “dreams”<br>
-what do people having hopes and troubles see in “dreams”?<br>
+<br>
+An woman undertaking a management of Dreaminn for some reasons face worries and dreams of visitors in their “dreams”<br>
+<br>
+What do people having hopes and troubles see in “dreams”?<br>
+<br>
 This is the RPG making “DREAMS” of ◾︎*.◾︎/◾︎ come true
 			</Markdown>
 			<Markdown v-if="locale === 'jp'">
 「おやすみなさい よい夢を」<br>
 <br>
-とある理由で宿屋の管理を引き受けた主人公は 夢の中で宿泊客の悩みと夢に向き合っていく<br>
+とある理由から宿屋の管理を引き受けた主人公は 夢の中で宿泊客の悩みと夢に向き合っていく<br>
 <br>
-悩みや希望を抱えて 人々は何を"ユメ"に見るのか<br>
+悩みや希望を抱え 人々は何を “ユメ” に見るのか<br>
 <br>
 ◾︎*.◾︎/◾︎の “ユメ” を叶える “夢物語” RPG
 			</Markdown>
