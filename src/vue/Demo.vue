@@ -18,7 +18,7 @@
 		data() {
 			return {
 				indexImg: require("../img/top_right.png"),
-				indexCharaImg: require("../img/programing_mouse-demo.png")
+				indexCharaImg: require("../img/programming_mouse-demo.png")
 			}
 		},
 		methods: {
