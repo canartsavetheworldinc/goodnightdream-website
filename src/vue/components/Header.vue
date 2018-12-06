@@ -2,8 +2,9 @@
 	<div class="container">
 		<div class="logo" @click="clickLogo()">
 			<router-link to="/">
-				<img v-if="!nightmare" src="../../img/logo_tsp.png" alt="GoodNightDream" />
-				<img v-if="nightmare" src="../../img/nightmare_tsp.png" alt="GoodNightMare" />
+				<img v-if="nightmare === `flickering`" src="../../img/logo_flickering_tsp.gif" alt="GoodNightDream" />
+				<img v-else-if="nightmare === `nightmare`" src="../../img/nightmare_tsp.png" alt="GoodNightMare" />
+				<img v-else src="../../img/logo_tsp.png" alt="GoodNightDream" />
 			</router-link>
 		</div>
 		<div class="locale"><a href="#" @click="locale(`en`)">EN</a> / <a href="#" @click="locale('jp')">JP</a></div>
@@ -41,6 +42,7 @@
 				this.$store.dispatch("clickLogo")
 				switch(this.clickCount) {
 					case 1:
+						this.$store.dispatch("setNightmareState", "flickering")
 						this.prankMsg = {
 							jp: new ModalMessage(``, ``, ``),
 							en: new ModalMessage(``, ``, ``)
@@ -53,7 +55,7 @@
 						}
 						break
 					case 3:
-						this.$store.dispatch("setNightmareState", true)
+						this.$store.dispatch("setNightmareState", "nightmare")
 						this.prankMsg = {
 							jp: new ModalMessage(`info`, `あはは、じゃあこんなのはどうさ？`, ``),
 							en: new ModalMessage(`info`, `hahha, so… how about this?`, ``)
@@ -122,6 +124,7 @@
 		height: 180px;
 		width: 855px;
 		object-fit: cover;
+		cursor: pointer;
 	}
 	.locale {
 		position: absolute;

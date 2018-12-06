@@ -11,7 +11,7 @@ const store = new Vuex.Store({
 		showModal: false,
 		modalMessage: new ModalMessage(),
 		logoClickCount: 0,
-		nightmareState: false
+		nightmareState: ""
 	},
 	mutations: {
 		changeLocale(state, lang) {
@@ -34,7 +34,9 @@ const store = new Vuex.Store({
 				state.logoClickCount++
 		},
 		setNightmareState(state, val) {
-			state.nightmareState = !!val
+			if(typeof val !== "string")
+				throw new Error(`nightmareState is invalid`)
+			state.nightmareState = val
 		}
 	},
 	getters: {
