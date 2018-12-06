@@ -18,12 +18,12 @@ This is the RPG making “DREAMS” of ◾︎*.◾︎/◾︎ come true
 			</Markdown>
 		</div>
 		<div class="main-links">
-			<MainLink class="main-link story" :src="mainLinks.story" title="Story" href="/story"></MainLink>
-			<MainLink class="main-link about" :src="mainLinks.about" title="About" href="/about"></MainLink>
-			<MainLink class="main-link demo" :src="mainLinks.demo" title="Demo" href="/demo"></MainLink>
+			<MainLink class="main-link story" :src="mainLinks.story" title="STORY" href="/story"></MainLink>
+			<MainLink class="main-link about" :src="mainLinks.about" title="ABOUT" href="/about"></MainLink>
+			<MainLink class="main-link demo" :src="mainLinks.demo" title="DEMO" href="/demo"></MainLink>
 		</div>
 		<div class="main-links">
-			<MainLink class="main-link twitter" :src="mainLinks.twitter" title="twitter" href="/twitter"></MainLink>
+			<MainLink class="main-link twitter" :src="mainLinks.twitter" title="Twitter" href="/twitter"></MainLink>
 		</div>
 	</div>
 </template>
