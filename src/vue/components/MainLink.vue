@@ -66,6 +66,9 @@
 		color: #ddd;
 		text-decoration: none;
 	}
+	.icon, .title {
+		transition: filter .3s;
+	}
 	.icon:hover, .title:hover {
 		filter: brightness(80%);
 	}

@@ -125,6 +125,10 @@
 		width: 855px;
 		object-fit: cover;
 		cursor: pointer;
+		transition: filter .3s;
+	}
+	.logo img:hover {
+		filter: brightness(70%);
 	}
 	.locale {
 		position: absolute;
