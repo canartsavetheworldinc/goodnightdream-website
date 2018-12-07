@@ -88,11 +88,14 @@ This is the RPG making “DREAMS” of ◾︎*.◾︎/◾︎ come true
 		width: 56px;
 	}
 	@media(max-width:768px) {
+		.top-container {
+			margin: 0 15px;
+		}
 		.discription {
-			margin: 5px 0 25px 0;
+			margin: 5px 0 35px 0;
 		}
 		.main-links {
-			margin: 25px 0 10px 0;
+			margin: 5px 0 5px 0;
 		}
 		.main-link {
 			width: 55px;

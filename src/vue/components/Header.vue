@@ -137,13 +137,13 @@
 	}
 	@media(max-width:768px) {
 		.container {
-			height: 100px;
-			min-height: 100px;
+			height: 80px;
+			min-height: 80px;
 			margin-top: 20px;
 		}
 		.logo img {
-			height: 85.5px;
-			width: 300px;
+			height: 88.35px;
+			width: 320px;
 		}
 		.logo img:hover {
 			filter: none;

@@ -35,4 +35,14 @@
 	.index-container .title {
 		/* font-family: "cheese"; */
 	}
+	@media(max-width:768px) {
+		.index-container {
+			height: 25px;
+			font-size: 22px;
+			margin-top: 3px;
+		}
+		.index-container img.character {
+			height: 35px;
+		}
+	}
 </style>
