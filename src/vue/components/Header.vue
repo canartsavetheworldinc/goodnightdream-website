@@ -76,9 +76,17 @@
 						break
 					case 2:
 						this.$store.dispatch("setNightmareState", "flickering-2")
+						this.prankStyle = {
+							container: {
+								backgroundColor: "#e45e32"
+							},
+							header: {
+								backgroundColor: "#931"
+							}
+						}
 						this.prankMsg = {
-							jp: new ModalMessage(`info`, `あんまり余計なことをしない方がいいよ`, ``),
-							en: new ModalMessage(`info`, `Don’t do anything useless so much`, ``)
+							jp: new ModalMessage(`info`, `あんまり余計なことをしない方がいいよ`, ``, this.prankStyle),
+							en: new ModalMessage(`info`, `Don’t do anything useless so much`, ``, this.prankStyle)
 						}
 						break
 					case 3:
