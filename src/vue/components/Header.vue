@@ -31,7 +31,23 @@
 		methods: {
 			locale(lang) {
 				// console.log(lang)
-				this.$store.dispatch("changeLocale", lang)
+				if(lang === this.getLang) {
+					this.prankStyle = {
+						container: {
+							backgroundColor: "#e45e32"
+						},
+						header: {
+							backgroundColor: "#931"
+						}
+					}
+					const message = {
+						jp: new ModalMessage(`info`, `すでに日本語だろ、違う？`, ``, this.prankStyle),
+						en: new ModalMessage(`info`, `This is in English, isn’t it?`, ``, this.prankStyle)
+					}
+					this.$store.dispatch("changeModalMessage", message[lang])
+				} else {
+					this.$store.dispatch("changeLocale", lang)
+				}
 			},
 			clickLogo() {
 				// if(this.path === "/" || this.nightmare)
@@ -45,7 +61,7 @@
 				switch(this.clickCount) {
 					case 1:
 						// this.$store.dispatch("setNightmareState", "flickering")
-						this.style = {
+						this.prankStyle = {
 							container: {
 								backgroundColor: "#e45e32"
 							},
@@ -54,8 +70,8 @@
 							}
 						}
 						this.prankMsg = {
-							jp: new ModalMessage(`info`, `タイトルに興味があるのかい？`, ``, this.style),
-							en: new ModalMessage(`info`, `Are you interested in this title?`, ``, this.style)
+							jp: new ModalMessage(`info`, `タイトルに興味があるのかい？`, ``, this.prankStyle),
+							en: new ModalMessage(`info`, `Are you interested in this title?`, ``, this.prankStyle)
 						}
 						break
 					case 2:
@@ -92,7 +108,7 @@
 				// 		}
 				// 		break
 					case 7:
-						this.style = {
+						this.prankStyle = {
 							container: {
 								color: "#333",
 								backgroundColor: "#fff462"
@@ -103,8 +119,8 @@
 							}
 						}
 						this.prankMsg = {
-							jp: new ModalMessage(`info`, `タイトルをクリックしてください`, ``, this.style),
-							en: new ModalMessage(`info`, `Click the title`, ``, this.style)
+							jp: new ModalMessage(`info`, `タイトルをクリックしてください`, ``, this.prankStyle),
+							en: new ModalMessage(`info`, `Click the title`, ``, this.prankStyle)
 						}
 						break
 					case 8:
