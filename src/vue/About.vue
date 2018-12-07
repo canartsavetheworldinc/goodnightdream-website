@@ -1,6 +1,6 @@
 <template>
 	<div class="page-container">
-		<Index :src="indexImg" title="About" :character="indexCharaImg"></Index>
+		<Index :src="indexImg" title="About" :character="indexCharaImg" :click="clickCharacter"></Index>
 		<div class="discription">
 			<Markdown v-if="locale === 'en'">
 Goodnightdream is an ansemble-cast role playing game to make people’s “dreams” come true<br>
@@ -43,6 +43,7 @@ GoodNightDream はRPGと音楽ゲームの要素を含んでいます<br>
 <script>
 	const Index = require("./components/Index.vue")
 	const Markdown = require("./components/Markdown.vue")
+	const ModalMessage = require("../modules/ModalMessage.js")
 
 	module.exports = {
 		components: {
@@ -56,6 +57,21 @@ GoodNightDream はRPGと音楽ゲームの要素を含んでいます<br>
 			}
 		},
 		methods: {
+			clickCharacter() {
+				const style = {
+					container: {
+						backgroundColor: "#e45e32"
+					},
+					header: {
+						backgroundColor: "#931"
+					}
+				}
+				const message = {
+					jp: new ModalMessage(`info`, `はは、細かいところまで確認するのはRPGの醍醐味だからね`, ``, style),
+					en: new ModalMessage(`info`, `Hahha, checking everything carefully is really important in RPG`, ``, style)
+				}
+				this.$store.dispatch("changeModalMessage", message[this.locale])
+			}
 		},
 		computed: {
 			locale() {

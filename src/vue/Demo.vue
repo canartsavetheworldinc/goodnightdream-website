@@ -1,6 +1,6 @@
 <template>
 	<div class="page-container">
-		<Index :src="indexImg" title="Demo" :character="indexCharaImg"></Index>
+		<Index :src="indexImg" title="Demo" :character="indexCharaImg" :click="clickCharacter"></Index>
 		<div class="discription">
 			<Markdown v-if="locale === 'en'">
 under development<br>
@@ -20,6 +20,7 @@ demo coming this spring
 <script>
 	const Index = require("./components/Index.vue")
 	const Markdown = require("./components/Markdown.vue")
+	const ModalMessage = require("../modules/ModalMessage.js")
 
 	module.exports = {
 		components: {
@@ -32,6 +33,23 @@ demo coming this spring
 			}
 		},
 		methods: {
+			clickCharacter() {
+				const style = {
+					container: {
+						color: "#333",
+						backgroundColor: "#fff462"
+					},
+					header: {
+						color: "#333",
+						backgroundColor: "#bb2"
+					}
+				}
+				const message = {
+					jp: new ModalMessage(`info`, `ごめんね、まだ開発中です`, ``, style),
+					en: new ModalMessage(`info`, `Sorry, now we are developing hardly`, ``, style)
+				}
+				this.$store.dispatch("changeModalMessage", message[this.locale])
+			}
 		},
 		computed: {
 			locale() {

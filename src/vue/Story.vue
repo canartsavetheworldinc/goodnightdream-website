@@ -1,6 +1,6 @@
 <template>
 	<div class="page-container">
-		<Index :src="indexImg" title="Story" :character="indexCharaImg"></Index>
+		<Index :src="indexImg" title="Story" :character="indexCharaImg" :click="clickCharacter"></Index>
 		<div class="discription">
 			<Markdown v-if="locale === 'en'">
 “Introduction”<br>
@@ -175,6 +175,7 @@ because everything painful melts in a fancy in a dream.<br>
 <script>
 	const Index = require("./components/Index.vue")
 	const Markdown = require("./components/Markdown.vue")
+	const ModalMessage = require("../modules/ModalMessage.js")
 
 	module.exports = {
 		components: {
@@ -188,6 +189,21 @@ because everything painful melts in a fancy in a dream.<br>
 			}
 		},
 		methods: {
+			clickCharacter() {
+				const style = {
+					container: {
+						backgroundColor: "#000B9D"
+					},
+					header: {
+						backgroundColor: "#004"
+					}
+				}
+				const message = {
+					jp: new ModalMessage(`info`, `お願い、私に触らないで`, ``, style),
+					en: new ModalMessage(`info`, `Don’t touch me, please`, ``, style)
+				}
+				this.$store.dispatch("changeModalMessage", message[this.locale])
+			}
 		},
 		computed: {
 			locale() {
