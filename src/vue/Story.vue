@@ -68,7 +68,7 @@ You can stay here if you like… but you…<br>
 <hr>
 I’ve already taken a train ticket for you. You can go to his inn anytime you want."<br>
 <br>
---------------　☾　-----------------<br>
+-----------------　☾　-----------------<br>
 <br>
 So, I set off on my short journey.<br>
 <br>
@@ -148,7 +148,7 @@ because everything painful melts in a fancy in a dream.<br>
 <hr>
 …汽車のチケットも取っておいたの, あなたさえ行きたければ, いつでもいけるからね.」<br>
 <br>
---------------　☾　-----------------<br>
+-----------------　☾　-----------------<br>
 <br>
 そうして私は短い療養の旅に出た.<br>
 <br>
