@@ -3,6 +3,7 @@
 		<div class="logo" @click="clickLogo()">
 			<router-link to="/">
 				<img v-if="nightmare === `flickering`" src="../../img/logo_flickering_tsp.gif" alt="GoodNightDream" />
+				<img v-else-if="nightmare === `flickering-2`" src="../../img/logo_flickering_2_tsp.gif" alt="GoodNightDream" />
 				<img v-else-if="nightmare === `nightmare`" src="../../img/nightmare_tsp.png" alt="GoodNightMare" />
 				<img v-else src="../../img/logo_tsp.png" alt="GoodNightDream" />
 			</router-link>
@@ -18,7 +19,8 @@
 		data() {
 			return {
 				path: this.$route.path,
-				prankMsg: {}
+				prankMsg: {},
+				prankStyle: {}
 			}
 		},
 		watch: {
@@ -42,41 +44,74 @@
 				this.$store.dispatch("clickLogo")
 				switch(this.clickCount) {
 					case 1:
+						// this.$store.dispatch("setNightmareState", "flickering")
+						this.style = {
+							container: {
+								backgroundColor: "#e45e32"
+							},
+							header: {
+								backgroundColor: "#931"
+							}
+						}
+						this.prankMsg = {
+							jp: new ModalMessage(`info`, `タイトルに興味があるのかい？`, ``, this.style),
+							en: new ModalMessage(`info`, `Are you interested in this title?`, ``, this.style)
+						}
+						break
+					case 2:
+						this.$store.dispatch("setNightmareState", "flickering-2")
+						this.prankMsg = {
+							jp: new ModalMessage(`info`, `あんまり余計なことをしない方がいいよ`, ``),
+							en: new ModalMessage(`info`, `Don’t do anything useless so much`, ``)
+						}
+						break
+					case 3:
 						this.$store.dispatch("setNightmareState", "flickering")
 						this.prankMsg = {
 							jp: new ModalMessage(``, ``, ``),
 							en: new ModalMessage(``, ``, ``)
 						}
 						break
-					case 2:
-						this.prankMsg = {
-							jp: new ModalMessage(`info`, `なに？そんなにタイトルがきになる？`, ``),
-							en: new ModalMessage(`info`, `what? what do you expect to see?`, ``)
-						}
-						break
-					case 3:
-						this.$store.dispatch("setNightmareState", "nightmare")
-						this.prankMsg = {
-							jp: new ModalMessage(`info`, `あはは、じゃあこんなのはどうさ？`, ``),
-							en: new ModalMessage(`info`, `hahha, so… how about this?`, ``)
-						}
-						break
 					case 4:
+						this.$store.dispatch("setNightmareState", "nightmare")
+				// 		this.prankMsg = {
+					// 			jp: new ModalMessage(`info`, `君が余計なことをするからだぜ`, ``),
+				// 			en: new ModalMessage(`info`, `cuz you did something needless`, ``)
+				// 		}
+						break
+				// 	case 5:
+				// 		this.prankMsg = {
+					// 			jp: new ModalMessage(`info`, `なに？戻したいの？`, ``),
+				// 			en: new ModalMessage(`info`, `what? do you want to recover this?`, ``)
+				// 		}
+				// 		break
+				// 	case 6:
+				// 		this.prankMsg = {
+					// 			jp: new ModalMessage(`info`, `残念、それは無理な相談だ`, ``),
+				// 			en: new ModalMessage(`info`, `nope, its not what you can.`, ``)
+				// 		}
+				// 		break
+					case 7:
+						this.style = {
+							container: {
+								color: "#333",
+								backgroundColor: "#fff462"
+							},
+							header: {
+								color: "#333",
+								backgroundColor: "#bb2"
+							}
+						}
 						this.prankMsg = {
-							jp: new ModalMessage(`info`, `君が余計なことをするからだぜ`, ``),
-							en: new ModalMessage(`info`, `cuz you did something needless`, ``)
+							jp: new ModalMessage(`info`, `タイトルをクリックしてください`, ``, this.style),
+							en: new ModalMessage(`info`, `Click the title`, ``, this.style)
 						}
 						break
-					case 5:
+					case 8:
+						this.$store.dispatch("setNightmareState", "")
 						this.prankMsg = {
-							jp: new ModalMessage(`info`, `なに？戻したいの？`, ``),
-							en: new ModalMessage(`info`, `what? do you want to recover this?`, ``)
-						}
-						break
-					case 6:
-						this.prankMsg = {
-							jp: new ModalMessage(`info`, `残念、それは無理な相談だ`, ``),
-							en: new ModalMessage(`info`, `nope, its not what you can.`, ``)
+							jp: new ModalMessage(``, ``, ``),
+							en: new ModalMessage(``, ``, ``)
 						}
 						break
 					default:
@@ -84,13 +119,11 @@
 				}
 				// console.log(this.prankMsg, this.getLang)
 				this.$store.dispatch("changeModalMessage", this.prankMsg[this.getLang] || null)
-			},
-			showModal(message) {
-				this.$store.dispatch("changeModalMessage", message)
 			}
 		},
 		computed: {
 			clickCount() {
+				document.activeElement.blur()
 				return this.$store.getters.logoClickCount
 			},
 			getLang() {

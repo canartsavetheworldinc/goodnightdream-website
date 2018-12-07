@@ -2,18 +2,18 @@
 	<transition name="modal">
 		<div v-mask class="modal-mask">
 			<div class="modal-wrapper">
-				<div class="modal-container">
-					<div class="modal-header">
+				<div v-modal_container class="modal-container">
+					<div v-modal_header class="modal-header">
 						<slot name="header">
 							{{ modalMessage.header }}
 						</slot>
 					</div>
-					<div class="modal-body">
+					<div v-modal_body class="modal-body">
 						<slot name="body">
 							{{ modalMessage.body }}
 						</slot>
 					</div>
-					<div class="modal-footer">
+					<div v-modal_footer class="modal-footer">
 						<slot name="footer">
 							{{ modalMessage.footer }}
 						</slot>
@@ -63,6 +63,46 @@
 					el.addEventListener("wheel", (e) => { e.preventDefault() })
 					el.addEventListener("touchmove", (e) => { e.preventDefault() }, { passive: false })
 				}
+			},
+			modal_container: {
+				inserted(el, binding, vnode) {
+					if(!vnode.context.modalMessage.style.container)
+						return
+					const style = []
+					style.push(`color: ${ vnode.context.modalMessage.style.container.color };`)
+					style.push(`background-color: ${ vnode.context.modalMessage.style.container.backgroundColor };`)
+					el.setAttribute("style", style.join(" "))
+				}
+			},
+			modal_header: {
+				inserted(el, binding, vnode) {
+					if(!vnode.context.modalMessage.style.header)
+						return
+					const style = []
+					style.push(`color: ${ vnode.context.modalMessage.style.header.color };`)
+					style.push(`background-color: ${ vnode.context.modalMessage.style.header.backgroundColor };`)
+					el.setAttribute("style", style.join(" "))
+				}
+			},
+			modal_body: {
+				inserted(el, binding, vnode) {
+					if(!vnode.context.modalMessage.style.body)
+						return
+					const style = []
+					style.push(`color: ${ vnode.context.modalMessage.style.body.color };`)
+					style.push(`background-color: ${ vnode.context.modalMessage.style.body.backgroundColor };`)
+					el.setAttribute("style", style.join(" "))
+				}
+			},
+			modal_footer: {
+				inserted(el, binding, vnode) {
+					if(!vnode.context.modalMessage.style.footer)
+						return
+					const style = []
+					style.push(`color: ${ vnode.context.modalMessage.style.footer.color };`)
+					style.push(`background-color: ${ vnode.context.modalMessage.style.footer.backgroundColor };`)
+					el.setAttribute("style", style.join(" "))
+				}
 			}
 		}
 	}
@@ -105,7 +145,7 @@
 	}
 
 	.modal-body {
-		margin: 20px 0 10px 30px;
+		margin: 20px 20px 10px 20px;
 	}
 
 	.modal-footer {
