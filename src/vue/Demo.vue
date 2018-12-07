@@ -1,6 +1,6 @@
 <template>
 	<div class="page-container">
-		<Index :src="indexImg" title="Demo" :character="indexCharaImg" :click="clickCharacter"></Index>
+		<Index :src="indexImg" title="Demo" :character="indexCharaImg" :clickmoon="clickMoon" :clickcharacter="clickCharacter"></Index>
 		<div class="discription">
 			<Markdown v-if="locale === 'en'">
 under development<br>
@@ -24,7 +24,8 @@ demo coming this spring
 
 	module.exports = {
 		components: {
-			Index
+			Index,
+			Markdown
 		},
 		data() {
 			return {
@@ -33,6 +34,23 @@ demo coming this spring
 			}
 		},
 		methods: {
+			clickMoon() {
+				const style = {
+					container: {
+						color: "#333",
+						backgroundColor: "#ddd"
+					},
+					header: {
+						color: "#ddd",
+						backgroundColor: "#333"
+					}
+				}
+				const message = {
+					jp: new ModalMessage(`月齢`, `有明月`, ``, style),
+					en: new ModalMessage(`Lunar phase`, `有明月`, ``, style)
+				}
+				this.$store.dispatch("changeModalMessage", message[this.locale])
+			},
 			clickCharacter() {
 				const style = {
 					container: {

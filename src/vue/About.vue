@@ -1,6 +1,6 @@
 <template>
 	<div class="page-container">
-		<Index :src="indexImg" title="About" :character="indexCharaImg" :click="clickCharacter"></Index>
+		<Index :src="indexImg" title="About" :character="indexCharaImg" :clickmoon="clickMoon" :clickcharacter="clickCharacter"></Index>
 		<div class="discription">
 			<Markdown v-if="locale === 'en'">
 Goodnightdream is an ansemble-cast role playing game to make people’s “dreams” come true<br>
@@ -57,6 +57,23 @@ GoodNightDream はRPGと音楽ゲームの要素を含んでいます<br>
 			}
 		},
 		methods: {
+			clickMoon() {
+				const style = {
+					container: {
+						color: "#333",
+						backgroundColor: "#ddd"
+					},
+					header: {
+						color: "#ddd",
+						backgroundColor: "#333"
+					}
+				}
+				const message = {
+					jp: new ModalMessage(`月齢`, `幾望`, ``, style),
+					en: new ModalMessage(`Lunar phase`, `幾望`, ``, style)
+				}
+				this.$store.dispatch("changeModalMessage", message[this.locale])
+			},
 			clickCharacter() {
 				const style = {
 					container: {

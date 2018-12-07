@@ -1,6 +1,6 @@
 <template>
 	<div class="page-container">
-		<Index :src="indexImg" title="Story" :character="indexCharaImg" :click="clickCharacter"></Index>
+		<Index :src="indexImg" title="Story" :character="indexCharaImg" :clickmoon="clickMoon" :clickcharacter="clickCharacter"></Index>
 		<div class="discription">
 			<Markdown v-if="locale === 'en'">
 “Introduction”<br>
@@ -189,6 +189,23 @@ because everything painful melts in a fancy in a dream.<br>
 			}
 		},
 		methods: {
+			clickMoon() {
+				const style = {
+					container: {
+						color: "#333",
+						backgroundColor: "#ddd"
+					},
+					header: {
+						color: "#ddd",
+						backgroundColor: "#333"
+					}
+				}
+				const message = {
+					jp: new ModalMessage(`月齢`, `初月`, ``, style),
+					en: new ModalMessage(`Lunar phase`, `初月`, ``, style)
+				}
+				this.$store.dispatch("changeModalMessage", message[this.locale])
+			},
 			clickCharacter() {
 				const style = {
 					container: {

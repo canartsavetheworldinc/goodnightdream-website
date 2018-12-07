@@ -1,14 +1,14 @@
 <template>
 	<div class="index-container">
-		<img :src="src" />
+		<img :src="src" @click="clickmoon()" />
 		<div class="title">{{ title }}</div>
-		<img class="character" v-if="character" :src="character" @click="click()" />
+		<img class="character" v-if="character" :src="character" @click="clickcharacter()" />
 	</div>
 </template>
 
 <script>
 	module.exports = {
-		props: ["src", "title", "character", "click"]
+		props: ["src", "title", "character", "clickmoon", "clickcharacter"]
 	}
 </script>
 
@@ -28,10 +28,10 @@
 	.index-container img {
 		height: 100%;
 		margin: 0 4px;
+		cursor: pointer;
 	}
 	.index-container img.character {
 		height: 45px;
-		cursor: pointer;
 	}
 	.index-container .title {
 		/* font-family: "cheese"; */
