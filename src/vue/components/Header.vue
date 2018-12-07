@@ -85,7 +85,7 @@
 							}
 						}
 						this.prankMsg = {
-							jp: new ModalMessage(`info`, `あんまり余計なことをしない方がいいよ`, ``, this.prankStyle),
+							jp: new ModalMessage(`info`, `あまり余計なことをしない方がいいよ`, ``, this.prankStyle),
 							en: new ModalMessage(`info`, `Don’t do anything useless so much`, ``, this.prankStyle)
 						}
 						break
