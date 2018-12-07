@@ -67,8 +67,8 @@ GoodNightDream はRPGと音楽ゲームの要素を含んでいます<br>
 					}
 				}
 				const message = {
-					jp: new ModalMessage(`info`, `はは、細かいところまで確認するのはRPGの醍醐味だからね`, ``, style),
-					en: new ModalMessage(`info`, `Hahha, checking everything carefully is really important in RPG`, ``, style)
+					jp: new ModalMessage(`message #e45e32`, `はは、細かいところまで確認するのはRPGの醍醐味だからね`, ``, style),
+					en: new ModalMessage(`message #e45e32`, `Hahha, checking everything carefully is really important in RPG`, ``, style)
 				}
 				this.$store.dispatch("changeModalMessage", message[this.locale])
 			}

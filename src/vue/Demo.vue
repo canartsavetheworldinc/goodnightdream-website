@@ -45,8 +45,8 @@ demo coming this spring
 					}
 				}
 				const message = {
-					jp: new ModalMessage(`info`, `ごめんね、まだ開発中です`, ``, style),
-					en: new ModalMessage(`info`, `Sorry, now we are developing hardly`, ``, style)
+					jp: new ModalMessage(`message #fff462`, `ごめんね、まだ開発中です`, ``, style),
+					en: new ModalMessage(`message #fff462`, `Sorry, now we are developing hardly`, ``, style)
 				}
 				this.$store.dispatch("changeModalMessage", message[this.locale])
 			}

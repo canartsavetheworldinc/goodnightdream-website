@@ -199,8 +199,8 @@ because everything painful melts in a fancy in a dream.<br>
 					}
 				}
 				const message = {
-					jp: new ModalMessage(`info`, `お願い、私に触らないで`, ``, style),
-					en: new ModalMessage(`info`, `Don’t touch me, please`, ``, style)
+					jp: new ModalMessage(`message #000B9D`, `お願い、私に触らないで`, ``, style),
+					en: new ModalMessage(`message #000B9D`, `Don’t touch me, please`, ``, style)
 				}
 				this.$store.dispatch("changeModalMessage", message[this.locale])
 			}

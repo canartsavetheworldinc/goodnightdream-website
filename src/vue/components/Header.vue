@@ -70,8 +70,8 @@
 							}
 						}
 						this.prankMsg = {
-							jp: new ModalMessage(`info`, `タイトルに興味があるのかい？`, ``, this.prankStyle),
-							en: new ModalMessage(`info`, `Are you interested in this title?`, ``, this.prankStyle)
+							jp: new ModalMessage(`question`, `タイトルに興味があるのかい？`, ``, this.prankStyle),
+							en: new ModalMessage(`question`, `Are you interested in this title?`, ``, this.prankStyle)
 						}
 						break
 					case 2:
@@ -85,8 +85,8 @@
 							}
 						}
 						this.prankMsg = {
-							jp: new ModalMessage(`info`, `あまり余計なことをしない方がいいよ`, ``, this.prankStyle),
-							en: new ModalMessage(`info`, `Don’t do anything useless so much`, ``, this.prankStyle)
+							jp: new ModalMessage(`warning`, `あまり余計なことをしない方がいいよ`, ``, this.prankStyle),
+							en: new ModalMessage(`warning`, `Don’t do anything useless so much`, ``, this.prankStyle)
 						}
 						break
 					case 3:
@@ -127,8 +127,8 @@
 							}
 						}
 						this.prankMsg = {
-							jp: new ModalMessage(`info`, `タイトルをクリックしてください`, ``, this.prankStyle),
-							en: new ModalMessage(`info`, `Click the title`, ``, this.prankStyle)
+							jp: new ModalMessage(`direction`, `タイトルをクリックしてください`, ``, this.prankStyle),
+							en: new ModalMessage(`direction`, `Click the title`, ``, this.prankStyle)
 						}
 						break
 					case 8:
