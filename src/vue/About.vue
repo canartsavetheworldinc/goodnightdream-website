@@ -77,4 +77,9 @@ GoodNightDream はRPGと音楽ゲームの要素を含んでいます<br>
 		width: 100%;
 		text-align: center;
 	}
+	@media(max-width:768px) {
+		.page-container {
+			margin: 0 17px;
+		}
+	}
 </style>

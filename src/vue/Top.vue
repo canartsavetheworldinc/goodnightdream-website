@@ -89,7 +89,7 @@ This is the RPG making “DREAMS” of ◾︎*.◾︎/◾︎ come true
 	}
 	@media(max-width:768px) {
 		.top-container {
-			margin: 0 15px;
+			margin: 0 17px;
 		}
 		.discription {
 			margin: 5px 0 35px 0;

@@ -50,4 +50,9 @@ demo coming this spring
 		margin: 15px 0 35px 0;
 		text-align: center;
 	}
+	@media(max-width:768px) {
+		.page-container {
+			margin: 0 17px;
+		}
+	}
 </style>
