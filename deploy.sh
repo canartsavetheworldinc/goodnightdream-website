@@ -8,6 +8,7 @@ git config user.email "canartsavetheworldinc@gmail.com"
 git config user.name "canartsavetheworld"
 
 echo 'goodnightdream.cf' > CNAME
+cp ../src/img/og_image.png ./og_image.png
 
 # mkdir public
 # cp ../src/img ./public/img
