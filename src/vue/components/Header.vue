@@ -45,9 +45,8 @@
 						en: new ModalMessage(`info`, `This is in English, isn’t it?`, ``, this.prankStyle)
 					}
 					this.$store.dispatch("changeModalMessage", message[lang])
-				} else {
-					this.$store.dispatch("changeLocale", lang)
 				}
+				this.$store.dispatch("changeLocale", lang)
 			},
 			clickLogo() {
 				// if(this.path === "/" || this.nightmare)

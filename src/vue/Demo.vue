@@ -11,7 +11,7 @@ demo coming this spring
 			<Markdown v-if="locale === 'jp'">
 開発中です<br>
 しばらくお待ちください<br>
-(デモ版公開予定 2019年1月末日)
+(デモ版公開予定 2019年春)
 			</Markdown>
 		</div>
 	</div>

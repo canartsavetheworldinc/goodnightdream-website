@@ -61,6 +61,7 @@ const store = new Vuex.Store({
 		changeLocale(store, lang) {
 			// console.log(store, lang)
 			store.commit("changeLocale", lang)
+			// console.log(`?lang=${ lang }${ window.location.hash }`)
 			window.location.href = `?lang=${ lang }${ window.location.hash }`
 		},
 		changeModalMessage(store, message) {
