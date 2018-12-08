@@ -99,7 +99,7 @@ This is the RPG making our “DREAMS” come true
 				<Markdown v-if="locale === 'en'">
 “Good night. Hope you have a good dream.”<br>
 <br>
-An woman undertaking a management of Dreaminn for some reasons face worries and dreams of visitors in their “dreams”<br>
+An woman undertaking a management of Dreaminn for some reasons faces worries and dreams of visitors in their “dreams”<br>
 <br>
 What do people having hopes and troubles see in “dreams”?<br>
 <br>
