@@ -74,7 +74,7 @@
 						}
 						break
 					case 2:
-						this.$store.dispatch("setNightmareState", "flickering-2")
+						this.$store.dispatch("setNightmareState", "flickering")
 						this.prankStyle = {
 							container: {
 								backgroundColor: "#e45e32"
@@ -89,7 +89,7 @@
 						}
 						break
 					case 3:
-						this.$store.dispatch("setNightmareState", "flickering")
+						this.$store.dispatch("setNightmareState", "flickering-2")
 						this.prankMsg = {
 							jp: new ModalMessage(``, ``, ``),
 							en: new ModalMessage(``, ``, ``)
