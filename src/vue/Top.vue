@@ -39,7 +39,7 @@ What do you expect to see?
 Hahha, so how about this?
 					</Markdown>
 					<Markdown v-if="locale === 'jp'">
-はは！じゃあこんなのはどうさ！
+はは、じゃあこんなのはどうさ？
 					</Markdown>
 				</div>
 			</div>
