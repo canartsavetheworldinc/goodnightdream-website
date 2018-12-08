@@ -8,7 +8,7 @@
 				<img v-else src="../../img/logo_tsp.png" alt="GoodNightDream" />
 			</router-link>
 		</div>
-		<div class="locale"><a href="#" @click="locale(`en`)">EN</a> / <a href="#" @click="locale('jp')">JP</a></div>
+		<div class="locale"><a @click="locale(`en`)">EN</a> / <a @click="locale('jp')">JP</a></div>
 	</div>
 </template>
 
@@ -45,8 +45,9 @@
 						en: new ModalMessage(`info`, `This is in English, isn’t it?`, ``, this.prankStyle)
 					}
 					this.$store.dispatch("changeModalMessage", message[lang])
+				} else {
+					this.$store.dispatch("changeLocale", lang)
 				}
-				this.$store.dispatch("changeLocale", lang)
 			},
 			clickLogo() {
 				// if(this.path === "/" || this.nightmare)
@@ -190,6 +191,10 @@
 		position: absolute;
 		top: 15px;
 		right: 15px;
+	}
+	.locale a {
+		text-decoration: underline;
+		cursor: pointer;
 	}
 	@media(max-width:768px) {
 		.container {
